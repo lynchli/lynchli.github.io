@@ -4,7 +4,7 @@
   <subtitle><![CDATA[climbing & coding]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.lynchli.com/"/>
-  <updated>2015-01-29T09:28:21.705Z</updated>
+  <updated>2015-01-30T07:33:28.146Z</updated>
   <id>http://www.lynchli.com/</id>
   
   <author>
@@ -19,46 +19,80 @@
     <link href="http://www.lynchli.com/2015/01/29/%E4%BD%BF%E7%94%A8Github-Pages%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://www.lynchli.com/2015/01/29/使用Github-Pages与Hexo搭建个人博客/</id>
     <published>2015-01-29T08:48:21.000Z</published>
-    <updated>2015-01-29T09:08:59.000Z</updated>
-    <content type="html"><![CDATA[]]></content>
+    <updated>2015-01-30T07:26:54.000Z</updated>
+    <content type="html"><![CDATA[<p>以前一直用WordPress，但是由于WordPress一直没有很好的支持Markdown的插件，并且感觉WordPress越来越臃肿，加上我一直非常的懒，所以后面基本就没有再更新过博客。直到最近发现了一个基于node.js的静态博客系统hexo，并且完美的支持Markdown，所以又让我燃起了写博客的兴趣，但是由于本人是重度拖延症患者，所以直到最近才完成这个静态博客的搭建，接下来就为大家介绍一下GitHub Pages以及hexo的使用方法。<br><a id="more"></a></p>
+<h3 id="什么是GitHub_Pages？">什么是GitHub Pages？</h3>
+<hr>
+<p>首先说说Git和GitHub，是的，Git和GitHub不是同一个东西，Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理，而GitHub则是托管各种Git库的站点。GitHub Pages是GitHub提供的一个免费服务，可以用于创建个人主页、企业主页以及项目主页，当然也包括博客。  </p>
+<h3 id="前期准备">前期准备</h3>
+<hr>
+<p>注册一个GitHub帐号：<a href="https://github.com/" target="_blank" rel="external">GitHub</a><br>安装Git：<a href="http://git-scm.com/" target="_blank" rel="external">Git官网</a>（如果你的系统是OS X或Linux的话，那么恭喜你，系统已经帮你集成好了Git，直接使用就可以）<br>关于Git的疑问可以参考这个博客：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a><br>安装Node.js：<a href="http://nodejs.org/" target="_blank" rel="external">Node.js官网</a><br>安装hexo：<a href="http://hexo.io/" target="_blank" rel="external">hexo</a>（其实安装很简单啦，一条命令搞定。）  </p>
+<h3 id="创建GitHub_Pages">创建GitHub Pages</h3>
+<hr>
+<p>登录你的GitHub帐号，找到右上角的<em>+</em>，选择new repository创建一个新的仓库，名字是<code>username.github.io</code>其中<code>username</code>是你的GitHub用户名。<br>创建好Github仓库之后GitHub Pages的服务就可以使用，你可以尝试向仓库中提交一个index.html  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">~ Lynch$ git clone https://github.com/username/username.github.io  </div><div class="line">~ Lynch$ <span class="built_in">cd</span> username.github.io</div><div class="line">username.github.io Lynch$ <span class="built_in">echo</span> <span class="string">"Hello World"</span> &gt; index.html</div><div class="line">username.github.io Lynch$ git add --all</div><div class="line">username.github.io Lynch$ git commit -m <span class="string">"Initial commit"</span></div><div class="line">username.github.io Lynch$ git push -u origin master</div></pre></td></tr></table></figure>
+
+
+<p>之后访问<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 就可以看到之前上传的index.html了。   </p>
+<h3 id="Hexo的使用">Hexo的使用</h3>
+<hr>
+<p>接下来就跟大家讲一讲Hexo具体的使用方法，首先是初始化：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~ Lynch$ hexo init [folder]</div></pre></td></tr></table></figure>
+
+
+<p>上面这条命令用来初始化你的网站，其中<code>folder</code>并不是必须的，如果指定了<code>folder</code>，Hexo会将网站初始化在<code>folder</code>目录下，否则则初始化在当前目录。<br>接下来在命令行输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo Lynch$ hexo s -g</div></pre></td></tr></table></figure>
+
+
+<p>这条命令代表了启动服务并生成静态网站，你会在命令行中看到：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[info] Hexo is running at http://localhost:<span class="number">4000</span>/. Press Ctrl+C to stop.</div></pre></td></tr></table></figure>
+
+
+<p>现在我们已经在本地搭建好hexo博客了，可以到浏览器输入<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 看看。<br>站点的配置文件是<code>_config.yml</code>，通过修改配置文件来设置一些个性化的信息，比如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: Hexo  <span class="comment">#你博客的标题</span></div><div class="line">subtitle:	<span class="comment">#副标题</span></div><div class="line">description:</div><div class="line">author: John Doe	<span class="comment">#这里修改为你的名字</span></div><div class="line">email:	<span class="comment">#你的邮箱</span></div><div class="line">language:	<span class="comment">#语言，这里填zh-CN</span></div><div class="line">url: http://yoursite.com	<span class="comment">#主页，可以填你当前的域名</span></div></pre></td></tr></table></figure>
+
+
+<p>需要注意的是:后面一定要跟空格，不然会报错，上面的配置主要配置了博客的一些基本信息，博客的配置基本已经完成，但是如果不喜欢hexo默认的主题怎么办呢？不用担心，现在就给大家介绍下怎么更换默认的主题，我使用的是<a href="http://wuchong.me/" target="_blank" rel="external">wuchong</a>修改的主题，通过git将主题复制到本地：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo Lynch$ git clone https://github.com/wuchong/jacman.git themes/jacman</div></pre></td></tr></table></figure>
+
+
+<p>然后配置<code>_config.yml</code>文件来修改主题：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">theme: jacman</div><div class="line">stylus:</div><div class="line">  compress: <span class="literal">true</span>	<span class="comment">#这里是打开css压缩</span></div></pre></td></tr></table></figure>
+
+<p>之后修改<code>themes/jacman</code>目录下的<code>_config.yml</code>文件进行属性配置，具体的配置可以参考：<a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" target="_blank" rel="external">如何使用 Jacman 主题</a>，这篇文章已经讲的很详细了，这里就不再赘述。<br>接下来就是将hexo博客部署到GitHub，配置hexo根目录的<code>_config.yml</code>文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: github	<span class="comment">#部署类型为github</span></div><div class="line">  repo: https://github.com/username/username.github.io	<span class="comment">#github仓库地址</span></div><div class="line">  branch: master	<span class="comment">#github分支</span></div></pre></td></tr></table></figure>
+
+
+<p>之后再命令行输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo Lynch$ hexo d -g</div></pre></td></tr></table></figure>
+
+<p>这样就完成GitHub的部署了，访问<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 就可以看到你刚刚部署的博客了。  </p>
+<h3 id="Hexo命令">Hexo命令</h3>
+<hr>
+<p>常用命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span></div><div class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></div><div class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></div><div class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></div></pre></td></tr></table></figure>
+
+<p>简写：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo n == hexo new</div><div class="line">hexo g == hexo generate</div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div></pre></td></tr></table></figure>
+
+<h3 id="发表新文章">发表新文章</h3>
+<hr>
+<p>用hexo发表新文章</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo Lynch$ hexo n <span class="string">'title'</span></div></pre></td></tr></table></figure>
+
+<p>这个命令会在<code>/source/_post</code>下面创建一个<code>title.md</code>文件，用编辑器打开编辑就好，也可以不使用上面的命令，只需要将编写好的文件放入<code>/source/_post</code>目录下即可。<br>hexo的正文支持Markdown，建议不会的同学去学习下：<a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="external">献给写作者的 Markdown 新手指南</a>  </p>
+<h3 id="相关资料：">相关资料：</h3>
+<hr>
+<p>[1]<a href="https://github.com/blog/272-github-pages" target="_blank" rel="external">GitHub Pages介绍</a> by mojombo<br>[2]<a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" target="_blank" rel="external">如何使用 Jacman 主题</a> by wuchong<br>[3]<a href="http://hexo.io/docs/" target="_blank" rel="external">hexo官网</a> by tommy351</p>
+]]></content>
     <summary type="html">
-    <![CDATA[]]>
+    <![CDATA[<p>以前一直用WordPress，但是由于WordPress一直没有很好的支持Markdown的插件，并且感觉WordPress越来越臃肿，加上我一直非常的懒，所以后面基本就没有再更新过博客。直到最近发现了一个基于node.js的静态博客系统hexo，并且完美的支持Markdown，所以又让我燃起了写博客的兴趣，但是由于本人是重度拖延症患者，所以直到最近才完成这个静态博客的搭建，接下来就为大家介绍一下GitHub Pages以及hexo的使用方法。<br>]]>
+    
     </summary>
     
       <category term="hexo" scheme="http://www.lynchli.com/tags/hexo/"/>
     
       <category term="hexo" scheme="http://www.lynchli.com/categories/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://www.lynchli.com/2015/01/27/hello-world/"/>
-    <id>http://www.lynchli.com/2015/01/27/hello-world/</id>
-    <published>2015-01-27T10:17:13.000Z</published>
-    <updated>2015-01-27T10:17:13.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
-    </summary>
     
   </entry>
   
