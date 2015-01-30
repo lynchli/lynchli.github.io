@@ -41,10 +41,6 @@
     <header>
       <div>
 		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.png" alt="Lynch" title="Lynch"/></a>
-			</div>
-			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Lynch">Lynch</a></h1>
 				<h2 class="blog-motto">climbing &amp; coding</h2>
@@ -120,7 +116,7 @@
 
 
 <p>上面这条命令用来初始化你的网站，其中<code>folder</code>并不是必须的，如果指定了<code>folder</code>，Hexo会将网站初始化在<code>folder</code>目录下，否则则初始化在当前目录。<br>接下来在命令行输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo Lynch$ hexo s -g</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo Lynch$ hexo g</div><div class="line">hexo Lynch$ hexo s</div></pre></td></tr></table></figure>
 
 
 <p>这条命令代表了启动服务并生成静态网站，你会在命令行中看到：</p>
@@ -143,7 +139,7 @@
 
 
 <p>之后再命令行输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo Lynch$ hexo d -g</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo Lynch$ hexo g</div><div class="line">hexo Lynch$ hexo d</div></pre></td></tr></table></figure>
 
 <p>这样就完成GitHub的部署了，访问<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 就可以看到你刚刚部署的博客了。  </p>
 <h3 id="Hexo命令">Hexo命令</h3>
@@ -202,6 +198,12 @@
 </section>
 
 
+<section id="comments" class="comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
@@ -238,25 +240,6 @@
 </div>
 
 
-  <div class="linkslist">
-  <p class="asidetitle">Links</p>
-    <ul>
-        
-          <li>
-            
-            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
-            
-          </li>
-        
-    </ul>
-</div>
-
   <div class="rsspart">
 	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
@@ -289,10 +272,16 @@
         
 
 
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd8799abc2909b4826fdc863fbe985614' type='text/javascript'%3E%3C/script%3E"));
+<script>
+var _hmt = _hmt || [];
+(function() {
+      var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?d8799abc2909b4826fdc863fbe985614";
+          var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+})();
 </script>
+
 
 
 
@@ -427,6 +416,26 @@ $(document).ready(function(){
   })();
 </script> 
 
+
+<script type="text/javascript">
+
+var disqus_shortname = 'lynchli';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
 
 
 

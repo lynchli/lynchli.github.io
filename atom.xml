@@ -4,7 +4,7 @@
   <subtitle><![CDATA[climbing & coding]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.lynchli.com/"/>
-  <updated>2015-01-30T07:33:28.146Z</updated>
+  <updated>2015-01-30T08:57:00.900Z</updated>
   <id>http://www.lynchli.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://www.lynchli.com/2015/01/29/%E4%BD%BF%E7%94%A8Github-Pages%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://www.lynchli.com/2015/01/29/使用Github-Pages与Hexo搭建个人博客/</id>
     <published>2015-01-29T08:48:21.000Z</published>
-    <updated>2015-01-30T07:26:54.000Z</updated>
+    <updated>2015-01-30T07:49:56.000Z</updated>
     <content type="html"><![CDATA[<p>以前一直用WordPress，但是由于WordPress一直没有很好的支持Markdown的插件，并且感觉WordPress越来越臃肿，加上我一直非常的懒，所以后面基本就没有再更新过博客。直到最近发现了一个基于node.js的静态博客系统hexo，并且完美的支持Markdown，所以又让我燃起了写博客的兴趣，但是由于本人是重度拖延症患者，所以直到最近才完成这个静态博客的搭建，接下来就为大家介绍一下GitHub Pages以及hexo的使用方法。<br><a id="more"></a></p>
 <h3 id="什么是GitHub_Pages？">什么是GitHub Pages？</h3>
 <hr>
@@ -41,7 +41,7 @@
 
 
 <p>上面这条命令用来初始化你的网站，其中<code>folder</code>并不是必须的，如果指定了<code>folder</code>，Hexo会将网站初始化在<code>folder</code>目录下，否则则初始化在当前目录。<br>接下来在命令行输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo Lynch$ hexo s -g</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo Lynch$ hexo g</div><div class="line">hexo Lynch$ hexo s</div></pre></td></tr></table></figure>
 
 
 <p>这条命令代表了启动服务并生成静态网站，你会在命令行中看到：</p>
@@ -64,7 +64,7 @@
 
 
 <p>之后再命令行输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo Lynch$ hexo d -g</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo Lynch$ hexo g</div><div class="line">hexo Lynch$ hexo d</div></pre></td></tr></table></figure>
 
 <p>这样就完成GitHub的部署了，访问<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 就可以看到你刚刚部署的博客了。  </p>
 <h3 id="Hexo命令">Hexo命令</h3>
