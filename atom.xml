@@ -3,9 +3,9 @@
   <title><![CDATA[Lynch]]></title>
   <subtitle><![CDATA[climbing & coding]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://www.lynchli.com/"/>
-  <updated>2016-07-25T10:23:44.524Z</updated>
-  <id>http://www.lynchli.com/</id>
+  <link href="http://www.lynch.li/"/>
+  <updated>2016-07-26T02:13:28.237Z</updated>
+  <id>http://www.lynch.li/</id>
   
   <author>
     <name><![CDATA[Lynch Li]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[使用Github Pages与Hexo搭建个人博客]]></title>
-    <link href="http://www.lynchli.com/2015/01/29/%E4%BD%BF%E7%94%A8Github-Pages%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://www.lynchli.com/2015/01/29/使用Github-Pages与Hexo搭建个人博客/</id>
+    <link href="http://www.lynch.li/2015/01/29/%E4%BD%BF%E7%94%A8Github-Pages%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://www.lynch.li/2015/01/29/使用Github-Pages与Hexo搭建个人博客/</id>
     <published>2015-01-29T08:48:21.000Z</published>
     <updated>2016-03-16T06:12:19.000Z</updated>
     <content type="html"><![CDATA[<p>以前一直用WordPress，但是由于WordPress一直没有很好的支持Markdown的插件，并且感觉WordPress越来越臃肿，加上我一直非常的懒，所以后面基本就没有再更新过博客。直到最近发现了一个基于node.js的静态博客系统hexo，并且完美的支持Markdown，所以又让我燃起了写博客的兴趣，但是由于本人是重度拖延症患者，所以直到最近才完成这个静态博客的搭建，接下来就为大家介绍一下GitHub Pages以及hexo的使用方法。<br><a id="more"></a></p>
@@ -90,9 +90,9 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://www.lynchli.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://www.lynch.li/tags/hexo/"/>
     
-      <category term="hexo" scheme="http://www.lynchli.com/categories/hexo/"/>
+      <category term="hexo" scheme="http://www.lynch.li/categories/hexo/"/>
     
   </entry>
   
